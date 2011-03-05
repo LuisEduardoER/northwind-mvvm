@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Northwind.Application;
 using Northwind.Interfaces;
 using Northwind.Interfaces.Data.Model;
 
@@ -24,7 +25,7 @@ namespace Northwind.ViewModel
                 if (_orders == null)
                 {
                     IEnumerable<IOrderModel> orders =
-                        _applicationServices.NorthwindManager.GetOrders(
+                        ApplicationServices.Instance.NorthwindManager.GetOrders(
                             _customer.CustomerID);
                     _orders 
                         = new ObservableCollection<IOrderModel>(orders);
@@ -37,9 +38,8 @@ namespace Northwind.ViewModel
 
         #region Ctors
 
-        public OrdersViewModel(ICustomerModel customer,
-                IApplicationServices applicationServices)
-            : base(customer.CompanyName, applicationServices)
+        public OrdersViewModel(ICustomerModel customer)
+            : base(customer.CompanyName)
         {
             _customer = customer;
             if (IsInDesignMode)

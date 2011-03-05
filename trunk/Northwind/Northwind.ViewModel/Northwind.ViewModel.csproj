@@ -52,7 +52,6 @@
     <Compile Include="CustomerDetailsViewModel.cs" />
     <Compile Include="CustomerSearchBoxViewModel.cs" />
     <Compile Include="Base\NamedViewModel.cs" />
-    <Compile Include="Base\ServiceViewModel.cs" />
     <Compile Include="ControlPanelViewModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Base\CommandViewModel.cs" />

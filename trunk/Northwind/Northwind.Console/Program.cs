@@ -1,5 +1,4 @@
 ﻿using Northwind.Application;
-using Northwind.Data;
 using Northwind.Interfaces.Data.Model;
 
 namespace Northwind.Console
@@ -17,7 +16,7 @@ namespace Northwind.Console
         {
             System.Console.WriteLine("Customers: ");
             foreach (ICustomerModel customer 
-                in new ApplicationServices(new NorthwindManager(new SqlNorthwindRepository()))
+                in ApplicationServices.Instance
                     .NorthwindManager.GetAllCustomersNameAndID())
             {
                 System.Console.WriteLine(customer.CompanyName);

@@ -5,7 +5,7 @@ namespace Northwind.ViewModel
 {
     public class OrderDetailsViewModel : ViewModelBase
     {
-        private IOrderModel order;                
+        private IOrderModel _order;                
 
         public OrderDetailsViewModel(IOrderModel order)
         {
@@ -17,6 +17,7 @@ namespace Northwind.ViewModel
             ////{
             ////    // Code runs "for real": Connect to service, etc...
             ////}
+            _order = order;
         }
     }
 }

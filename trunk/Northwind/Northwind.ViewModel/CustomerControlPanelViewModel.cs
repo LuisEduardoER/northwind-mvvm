@@ -2,6 +2,7 @@
 using System.Collections.Specialized;
 using System.ComponentModel;
 using GalaSoft.MvvmLight.Command;
+using Northwind.Application;
 using Northwind.Interfaces;
 using Northwind.Interfaces.Data.Model;
 
@@ -40,18 +41,15 @@ namespace Northwind.ViewModel
             }
         }
 
-        public CustomerControlPanelViewModel(
-                IApplicationServices applicationServices)
-            : base(Strings.CustomerDetailsDisplayName, 
-                applicationServices)
+        public CustomerControlPanelViewModel()
+            : base(Strings.CustomerDetailsDisplayName)
         {
-            _applicationServices = applicationServices;
         }
 
         protected override void AddComponents()
         {
             _customerSearchBoxViewModel
-                = new CustomerSearchBoxViewModel(_applicationServices);
+                = new CustomerSearchBoxViewModel();
             _customerSearchBoxViewModel.PropertyChanged 
                 += _customerSearchBoxViewModel_PropertyChanged;
             Components.Add(_customerSearchBoxViewModel);
