@@ -62,6 +62,7 @@
     <Compile Include="Data\Model\IOrderDetailModel.cs" />
     <Compile Include="Data\Model\IProductModel.cs" />
     <Compile Include="INorthwindManager.cs" />
+    <Compile Include="IObjectFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

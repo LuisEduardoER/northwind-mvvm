@@ -3,11 +3,12 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Windows.Data;
+using Northwind.Application;
 using Northwind.Interfaces;
 
 namespace Northwind.ViewModel
 {
-    public class MainWindowViewModel : ServiceViewModel
+    public class MainWindowViewModel : NamedViewModel
     {
         #region Properties
 
@@ -20,8 +21,7 @@ namespace Northwind.ViewModel
                 if (_controlPanel == null)
                 {
                     _controlPanel 
-                        = new ControlPanelViewModel(
-                            _applicationServices);
+                        = new ControlPanelViewModel();
                     _controlPanel.ShowCustomerDetails 
                         += ControlPanel_ShowCustomerDetails;
                 }
@@ -34,8 +34,8 @@ namespace Northwind.ViewModel
         {
             CustomerDetailsViewModel customerDetailsViewModelBase
                 = new CustomerDetailsViewModel(
-                    _applicationServices.NorthwindManager.GetCustomerByID(e.CustomerID),
-                    _applicationServices);
+                    ApplicationServices.Instance.NorthwindManager.GetCustomerByID(e.CustomerID),
+                    ApplicationServices.Instance);
             Tools.Add(customerDetailsViewModelBase);
             SetCurrentTool(customerDetailsViewModelBase);
         }
@@ -58,19 +58,9 @@ namespace Northwind.ViewModel
 
         #region ctor
 
-        /// <summary>
-        /// Initializes a new instance of the CustomersViewModel class.
-        /// </summary>
-        public MainWindowViewModel(IApplicationServices applicationServices)
-            : base(Strings.MainWindowDisplayName, applicationServices)
+        public MainWindowViewModel()
+            : base(Strings.MainWindowDisplayName)
         {
-            if (IsInDesignMode)
-            {
-                // Code runs in Blend --> create design time data.
-            }
-            else
-            {
-            }
         }
 
         #endregion ctor

@@ -5,7 +5,7 @@ using Northwind.Interfaces;
 
 namespace Northwind.ViewModel
 {
-    public class ToolViewModel : ServiceViewModel
+    public class ToolViewModel : NamedViewModel
     {
         public event EventHandler RequestClose = delegate { };
 
@@ -26,9 +26,8 @@ namespace Northwind.ViewModel
         }        
 
 
-        public ToolViewModel(string displayName, 
-                IApplicationServices applicationServices)
-            : base(displayName, applicationServices)
+        public ToolViewModel(string displayName)
+            : base(displayName)
         {
         }
     }

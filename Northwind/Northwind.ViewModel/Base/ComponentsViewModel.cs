@@ -4,7 +4,7 @@ using Northwind.Interfaces;
 
 namespace Northwind.ViewModel
 {
-    public abstract class ComponentsViewModel : ServiceViewModel
+    public abstract class ComponentsViewModel : NamedViewModel
     {
         #region Properties
         
@@ -35,9 +35,8 @@ namespace Northwind.ViewModel
 
         #endregion Properties
 
-        protected ComponentsViewModel(string name, 
-                IApplicationServices applicationServices)
-            : base(name, applicationServices)
+        protected ComponentsViewModel(string name)
+            : base(name)
         {
             AddComponents();
         }

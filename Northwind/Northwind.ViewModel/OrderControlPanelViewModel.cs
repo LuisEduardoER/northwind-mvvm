@@ -5,9 +5,8 @@ namespace Northwind.ViewModel
 {
     public class OrderControlPanelViewModel : ComponentsViewModel
     {
-        public OrderControlPanelViewModel(
-                IApplicationServices applicationServices)
-            : base(Strings.OrderControlPanelName, applicationServices)
+        public OrderControlPanelViewModel()
+            : base(Strings.OrderControlPanelName)
         {
             ////if (IsInDesignMode)
             ////{

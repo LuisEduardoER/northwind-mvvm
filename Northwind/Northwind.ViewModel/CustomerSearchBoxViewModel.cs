@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using Northwind.Application;
 using Northwind.Interfaces;
 using Northwind.Interfaces.Data.Model;
 
 namespace Northwind.ViewModel
 {
-    public class CustomerSearchBoxViewModel : ServiceViewModel
+    public class CustomerSearchBoxViewModel : NamedViewModel
     {
         #region Properties
 
@@ -61,9 +62,8 @@ namespace Northwind.ViewModel
 
         #endregion Properties
 
-        public CustomerSearchBoxViewModel(
-                IApplicationServices applicationServices)
-            : base(Strings.CustomerSearchBoxName, applicationServices)
+        public CustomerSearchBoxViewModel()
+            : base(Strings.CustomerSearchBoxName)
         {
             if (IsInDesignMode)
             {
@@ -72,7 +72,7 @@ namespace Northwind.ViewModel
             else
             {
                 foreach (ICustomerModel customer
-                    in _applicationServices.NorthwindManager
+                    in ApplicationServices.Instance.NorthwindManager
                         .GetAllCustomersNameAndID())
                 {
                     Customers.Add(customer);

@@ -1,6 +1,4 @@
-﻿using GalaSoft.MvvmLight;
-using Northwind.Application;
-using Northwind.Data;
+﻿using Northwind.Application;
 
 namespace Northwind.ViewModel
 {
@@ -21,9 +19,6 @@ namespace Northwind.ViewModel
             }
         }
 
-        /// <summary>
-        /// Gets the MainWindowViewModelBase property.
-        /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
             "CA1822:MarkMembersAsStatic",
             Justification = "This non-static member is needed for data binding purposes.")]
@@ -35,51 +30,22 @@ namespace Northwind.ViewModel
             }
         }
 
-        /// <summary>
-        /// Provides a deterministic way to delete the MainWindowViewModelBase property.
-        /// </summary>
         public static void ClearMainWindowViewModel()
         {
             _mainWindowViewModelBase.Cleanup();
             _mainWindowViewModelBase = null;
         }
 
-        /// <summary>
-        /// Provides a deterministic way to create the MainWindowViewModelBase property.
-        /// </summary>
         public static void CreateMainWindowViewModel()
         {
-            if (_mainWindowViewModelBase == null)
-            {
-                if (ViewModelBase.IsInDesignModeStatic)
-                {
-                    _mainWindowViewModelBase
-                        = new MainWindowViewModel(null);                    
-                }
-                else
-                {
-                    _mainWindowViewModelBase
-                        = new MainWindowViewModel(
-                                new ApplicationServices(
-                                    new NorthwindManager(
-                                        new SqlNorthwindRepository())));
-                }
-            }
+            _mainWindowViewModelBase
+                = ApplicationServices.Instance
+                    .ObjectFactory.Get
+                    <MainWindowViewModel>();
         }
 
-        /// <summary>
-        /// Initializes a new instance of the ViewModelLocator class.
-        /// </summary>
         public ViewModelLocator()
         {
-            ////if (ViewModelBase.IsInDesignModeStatic)
-            ////{
-            ////    // Create design time view models
-            ////}
-            ////else
-            ////{
-            ////    // Create run time view models
-            ////}
         }
 
         /// <summary>

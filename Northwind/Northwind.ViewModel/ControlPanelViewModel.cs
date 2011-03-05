@@ -1,4 +1,5 @@
 ﻿using System;
+using Northwind.Application;
 using Northwind.Interfaces;
 
 namespace Northwind.ViewModel
@@ -12,23 +13,20 @@ namespace Northwind.ViewModel
 
         #endregion Events
 
-        public ControlPanelViewModel(
-                IApplicationServices applicationServices)
-            : base(Strings.ControlPanelHeader, applicationServices)
+        public ControlPanelViewModel()
+            : base(Strings.ControlPanelHeader)
         {}
 
         protected override void AddComponents()
         {
             CustomerControlPanelViewModel
                 customerControlPanelViewModel
-                    = new CustomerControlPanelViewModel(
-                        _applicationServices);
+                    = new CustomerControlPanelViewModel();
             customerControlPanelViewModel.ShowCustomerDetails 
                 += customerControlPanelViewModel_ShowCustomerDetails;
             Components.Add(customerControlPanelViewModel);
             Components.Add(
-                new OrderControlPanelViewModel(
-                    _applicationServices));
+                new OrderControlPanelViewModel());
         }
 
         void customerControlPanelViewModel_ShowCustomerDetails(

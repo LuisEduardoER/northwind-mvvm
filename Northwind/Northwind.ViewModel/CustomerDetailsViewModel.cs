@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
+using Northwind.Application;
 using Northwind.Interfaces;
 using Northwind.Interfaces.Data.Model;
 
@@ -52,9 +53,8 @@ namespace Northwind.ViewModel
 
         public CustomerDetailsViewModel(ICustomerModel customer, 
                     IApplicationServices applicationServices)
-            : base(customer.CompanyName, applicationServices)
+            : base(customer.CompanyName)
         {
-            _applicationServices = applicationServices;
             Name = Strings.CustomerDetailsDisplayName;
             _customer = customer;
             ((INotifyPropertyChanged)_customer).PropertyChanged 
@@ -80,7 +80,7 @@ namespace Northwind.ViewModel
 
         public void UpdateCommand_Execute()
         {
-            _applicationServices.NorthwindManager
+            ApplicationServices.Instance.NorthwindManager
                 .SaveChanges();
         }
 

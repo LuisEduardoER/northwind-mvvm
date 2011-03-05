@@ -4,12 +4,40 @@ namespace Northwind.Application
 {
     public class ApplicationServices : IApplicationServices
     {
-        private readonly INorthwindManager _northwindManager;
-        public INorthwindManager NorthwindManager { get { return _northwindManager; } }
-
-        public ApplicationServices(INorthwindManager northwindManager)
+        private static IApplicationServices _instance;
+        public static IApplicationServices Instance
         {
-            _northwindManager = northwindManager;
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance =
+                        new ApplicationServices(new NinjectObjectFactory());
+                }
+                return _instance;
+            }
+            internal set { _instance = value; }
+        }
+
+        private INorthwindManager _northwindManager;
+        public INorthwindManager NorthwindManager
+        {
+            get
+            {
+                if (_northwindManager == null)
+                {
+                    _northwindManager 
+                        = ObjectFactory.Get<INorthwindManager>();
+                }
+                return _northwindManager;
+            }
+        }
+
+        public IObjectFactory ObjectFactory { get; internal set; }
+
+        public ApplicationServices(IObjectFactory objectFactory)
+        {
+            ObjectFactory = objectFactory;
         }
     }
 }
