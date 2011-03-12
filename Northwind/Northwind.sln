@@ -24,6 +24,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{
 		Libraries\Ninject.dll = Libraries\Ninject.dll
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{3681D74A-9E0A-42AD-8741-0084F3775928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Framework.UI", "Northwind.Framework.UI\Northwind.Framework.UI.csproj", "{4C5682A4-AFD9-4EA2-B96D-303B63419FB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +98,16 @@ Global
 		{33FFA657-2577-45B5-A875-7F8131A86360}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{33FFA657-2577-45B5-A875-7F8131A86360}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{33FFA657-2577-45B5-A875-7F8131A86360}.Release|x86.ActiveCfg = Release|Any CPU
+		{4C5682A4-AFD9-4EA2-B96D-303B63419FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5682A4-AFD9-4EA2-B96D-303B63419FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5682A4-AFD9-4EA2-B96D-303B63419FB7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4C5682A4-AFD9-4EA2-B96D-303B63419FB7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4C5682A4-AFD9-4EA2-B96D-303B63419FB7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4C5682A4-AFD9-4EA2-B96D-303B63419FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5682A4-AFD9-4EA2-B96D-303B63419FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5682A4-AFD9-4EA2-B96D-303B63419FB7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4C5682A4-AFD9-4EA2-B96D-303B63419FB7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4C5682A4-AFD9-4EA2-B96D-303B63419FB7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,5 +118,6 @@ Global
 		{BFB9FEA5-D674-416C-8B04-06504699C80C} = {E4523C6A-9859-4E03-9178-CC6D5A93C67C}
 		{F6E419DD-A8C2-433B-A4B2-27B991594FBA} = {E4523C6A-9859-4E03-9178-CC6D5A93C67C}
 		{31C8365C-1B50-45B0-8785-01BA54E657F2} = {E4523C6A-9859-4E03-9178-CC6D5A93C67C}
+		{4C5682A4-AFD9-4EA2-B96D-303B63419FB7} = {3681D74A-9E0A-42AD-8741-0084F3775928}
 	EndGlobalSection
 EndGlobal

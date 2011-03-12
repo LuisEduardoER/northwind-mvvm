@@ -87,6 +87,8 @@ namespace Northwind.ViewModel
 
         public void OnShowCustomerDetails()
         {
+            if (SelectedCustomer == null)
+                return;
             ShowCustomerDetails(this, 
                 new CustomerEventArgs(SelectedCustomer.CustomerID));
         }

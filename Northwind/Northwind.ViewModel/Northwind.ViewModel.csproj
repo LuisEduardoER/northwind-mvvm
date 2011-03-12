@@ -53,6 +53,7 @@
     <Compile Include="CustomerSearchBoxViewModel.cs" />
     <Compile Include="Base\NamedViewModel.cs" />
     <Compile Include="ControlPanelViewModel.cs" />
+    <Compile Include="CustomerViewModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Base\CommandViewModel.cs" />
     <Compile Include="OrderControlPanelViewModel.cs" />

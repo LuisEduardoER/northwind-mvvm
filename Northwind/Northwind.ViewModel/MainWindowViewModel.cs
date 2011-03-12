@@ -4,8 +4,6 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Data;
-using Northwind.Application;
-using Northwind.Interfaces;
 
 namespace Northwind.ViewModel
 {
@@ -28,26 +26,6 @@ namespace Northwind.ViewModel
                 }
                 return _controlPanel;
             }
-        }
-
-        void ControlPanelShowCustomerDetails(object sender, 
-                CustomerEventArgs e)
-        {
-            CustomerDetailsViewModel customerDetailsViewModel 
-                = Tools.Cast<CustomerDetailsViewModel>()
-                      .FirstOrDefault(
-                          detailsViewModel => 
-                          detailsViewModel.Customer.CustomerID == e.CustomerID
-                      ) ?? GetNewCustomerDetailsViewModel(e.CustomerID);
-            SetCurrentTool(customerDetailsViewModel);
-        }
-
-        private CustomerDetailsViewModel GetNewCustomerDetailsViewModel(string customerID)
-        {
-            CustomerDetailsViewModel customerDetailsViewModel 
-                = new CustomerDetailsViewModel(customerID);
-            Tools.Add(customerDetailsViewModel);
-            return customerDetailsViewModel;
         }
 
         private ObservableCollection<ToolViewModel> _tools;
@@ -74,6 +52,22 @@ namespace Northwind.ViewModel
         }
 
         #endregion ctor
+
+        #region Command handlers
+
+        void ControlPanelShowCustomerDetails(object sender,
+        CustomerEventArgs e)
+        {
+            CustomerDetailsViewModel customerDetailsViewModel
+                = Tools.Cast<CustomerDetailsViewModel>()
+                      .FirstOrDefault(
+                          detailsViewModel =>
+                          detailsViewModel.Customer.CustomerID == e.CustomerID
+                      ) ?? GetNewCustomerDetailsViewModel(e.CustomerID);
+            SetCurrentTool(customerDetailsViewModel);
+        }
+
+        #endregion Command handlers
 
         #region Event handlers
 
@@ -109,6 +103,14 @@ namespace Northwind.ViewModel
                     throw new InvalidOperationException("Could not find the current tool.");
                 }
             }
+        }
+
+        private CustomerDetailsViewModel GetNewCustomerDetailsViewModel(string customerID)
+        {
+            CustomerDetailsViewModel customerDetailsViewModel
+                = new CustomerDetailsViewModel(customerID);
+            Tools.Add(customerDetailsViewModel);
+            return customerDetailsViewModel;
         }
 
         #endregion Helpers

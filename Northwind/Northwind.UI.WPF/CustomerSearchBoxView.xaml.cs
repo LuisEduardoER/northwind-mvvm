@@ -14,11 +14,5 @@ namespace Northwind.UI.WPF
         {
             InitializeComponent();
         }
-
-        private void CustomerDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            ((CustomerSearchBoxViewModel) DataContext).
-                RaiseShowCustomerDetails();
-        }
     }
 }
