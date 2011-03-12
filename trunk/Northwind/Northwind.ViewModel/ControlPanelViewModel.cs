@@ -23,13 +23,13 @@ namespace Northwind.ViewModel
                 customerControlPanelViewModel
                     = new CustomerControlPanelViewModel();
             customerControlPanelViewModel.ShowCustomerDetails 
-                += customerControlPanelViewModel_ShowCustomerDetails;
+                += CustomerControlPanelViewModelShowCustomerDetails;
             Components.Add(customerControlPanelViewModel);
             Components.Add(
                 new OrderControlPanelViewModel());
         }
 
-        void customerControlPanelViewModel_ShowCustomerDetails(
+        void CustomerControlPanelViewModelShowCustomerDetails(
                 object sender, CustomerEventArgs e)
         {
             ShowCustomerDetails(sender, e);

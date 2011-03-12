@@ -51,7 +51,9 @@ namespace Northwind.ViewModel
             _customerSearchBoxViewModel
                 = new CustomerSearchBoxViewModel();
             _customerSearchBoxViewModel.PropertyChanged 
-                += _customerSearchBoxViewModel_PropertyChanged;
+                += CustomerSearchBoxViewModelPropertyChanged;
+            _customerSearchBoxViewModel.ShowCustomerDetails 
+                += CustomerDetailsSearchBoxViewModelShowCustomerDetails;
             Components.Add(_customerSearchBoxViewModel);
             _showDetailsCommandViewModel = new CommandViewModel(
                 Strings.CustomerShowDetails,
@@ -61,7 +63,12 @@ namespace Northwind.ViewModel
             Components.Add(_showDetailsCommandViewModel);
         }
 
-        void _customerSearchBoxViewModel_PropertyChanged(
+        void CustomerDetailsSearchBoxViewModelShowCustomerDetails(object sender, EventArgs e)
+        {
+            OnShowCustomerDetails();
+        }
+
+        void CustomerSearchBoxViewModelPropertyChanged(
             object sender, PropertyChangedEventArgs e)
         {
             switch (e.PropertyName)

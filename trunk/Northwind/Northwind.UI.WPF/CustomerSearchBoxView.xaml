@@ -7,11 +7,18 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <StackPanel>
         <ListBox ItemsSource="{Binding Customers}"
-                        DisplayMemberPath="CompanyName"
-                        SelectedValuePath="CustomerID"
-                        SelectedItem="{Binding SelectedCustomer}"
-                        HorizontalAlignment="Left"
-                        Height="180" Width="250"
-                        />
+                 DisplayMemberPath="CompanyName"
+                 SelectedValuePath="CustomerID"
+                 SelectedItem="{Binding SelectedCustomer}"
+                 HorizontalAlignment="Left"
+                 Height="180"
+                 Width="250">
+            <ListBox.Resources>
+                <Style TargetType="ListBoxItem">
+                    <EventSetter Event="MouseDoubleClick"
+                                    Handler="CustomerDoubleClick" />
+                </Style>
+            </ListBox.Resources>
+        </ListBox>
     </StackPanel>
 </UserControl>

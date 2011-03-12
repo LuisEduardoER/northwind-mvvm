@@ -37,7 +37,7 @@ namespace Northwind.ViewModel
 
         public const string CustomersPropertyName = "Customers";
 
-        private ObservableCollection<ICustomerModel> _customers 
+        private ObservableCollection<ICustomerModel> _customers
                     = new ObservableCollection<ICustomerModel>();
 
         public ObservableCollection<ICustomerModel> Customers
@@ -58,9 +58,16 @@ namespace Northwind.ViewModel
 
                 RaisePropertyChanged(CustomersPropertyName);
             }
-        }        
+        }
 
         #endregion Properties
+
+        #region Events
+
+        public event EventHandler ShowCustomerDetails 
+            = delegate {};
+
+        #endregion Events
 
         public CustomerSearchBoxViewModel()
             : base(Strings.CustomerSearchBoxName)
@@ -77,7 +84,12 @@ namespace Northwind.ViewModel
                 {
                     Customers.Add(customer);
                 }
-            }            
+            }
+        }
+
+        public void RaiseShowCustomerDetails()
+        {
+            ShowCustomerDetails(this, EventArgs.Empty);
         }
     }
 }
