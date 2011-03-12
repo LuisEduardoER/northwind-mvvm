@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace Northwind.UI.WPF
 {
@@ -13,6 +15,11 @@ namespace Northwind.UI.WPF
         public CustomerDetailsView()
         {
             InitializeComponent();
+        }
+
+        public void HandleDoubleClick(object sender, MouseButtonEventArgs mouseButtonEventArgs)
+        {
+            MessageBox.Show("Worked bitch");
         }
     }
 }

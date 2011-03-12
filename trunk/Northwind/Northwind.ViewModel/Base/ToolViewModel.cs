@@ -13,7 +13,8 @@ namespace Northwind.ViewModel
 
         public ICommand CloseCommand
         {
-            get {
+            get
+            {
                 return _closeCommand ??
                        (_closeCommand =
                         new RelayCommand(OnRequestClose));
@@ -23,12 +24,13 @@ namespace Northwind.ViewModel
         private void OnRequestClose()
         {
             RequestClose(this, EventArgs.Empty);
-        }        
+        }
 
+        public ToolViewModel()
+        { }
 
         public ToolViewModel(string displayName)
             : base(displayName)
-        {
-        }
+        { }
     }
 }
