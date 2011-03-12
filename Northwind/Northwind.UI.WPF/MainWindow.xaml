@@ -48,8 +48,9 @@
                                 Margin="0,1,0,0" Padding="0"
                                 VerticalContentAlignment="Bottom"
                                 Width="16" Height="16" />
-                        <ContentPresenter
-                                Content="{Binding Path=Name}"
+                        <ContentPresenter 
+                                Content="{Binding 
+                                    Path=Customer.CompanyName}"
                                 VerticalAlignment="Center" />
                     </DockPanel>
                 </DataTemplate>

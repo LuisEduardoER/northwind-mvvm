@@ -136,6 +136,8 @@ namespace Northwind.Application.Model
         {
             get
             {
+                // TODO: This needs to be dynamic
+                // Look at System.Runtime.Caching for sql change monitoring
                 if (_total == decimal.MinValue)
                 {
                     _total = 0;

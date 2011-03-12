@@ -33,9 +33,7 @@ namespace Northwind.ViewModel
                 CustomerEventArgs e)
         {
             CustomerDetailsViewModel customerDetailsViewModelBase
-                = new CustomerDetailsViewModel(
-                    ApplicationServices.Instance.NorthwindManager.GetCustomerByID(e.CustomerID),
-                    ApplicationServices.Instance);
+                = new CustomerDetailsViewModel(e.CustomerID);
             Tools.Add(customerDetailsViewModelBase);
             SetCurrentTool(customerDetailsViewModelBase);
         }

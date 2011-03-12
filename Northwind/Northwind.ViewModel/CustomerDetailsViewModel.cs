@@ -47,21 +47,45 @@ namespace Northwind.ViewModel
             }
         }
 
+        /// <summary>
+        /// The <see cref="DetailsItemStyle" /> property's name.
+        /// </summary>
+        public const string DetailsItemStylePropertyName = "DetailsItemStyle";
+
+        private ICommand _detailsItemStyle = null;
+
+        public ICommand DetailsItemStyle
+        {
+            get
+            {
+                if (_detailsItemStyle == null)
+                {
+                    _detailsItemStyle =
+                        new RelayCommand<string>(ShowOrderDetails);
+                }
+                return _detailsItemStyle;
+            }
+        }
+
+        private static void ShowOrderDetails(string id)
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion Properties
 
 
-        public CustomerDetailsViewModel(ICustomerModel customer, 
-                    IApplicationServices applicationServices)
-            : base(customer.CompanyName)
+        public CustomerDetailsViewModel(string customerID)
         {
+            _customer = ApplicationServices.Instance
+                .NorthwindManager.GetCustomerByID(customerID);
             Name = Strings.CustomerDetailsDisplayName;
-            _customer = customer;
             ((INotifyPropertyChanged)_customer).PropertyChanged 
                 += CustomerDetailsViewModel_PropertyChanged;
             Orders =
-                applicationServices.NorthwindManager.GetOrders(
-                    Customer.CustomerID);
+                ApplicationServices.Instance
+                    .NorthwindManager.GetOrders(
+                        Customer.CustomerID);
             UpdateCommandViewModel = new CommandViewModel(
                 Strings.UpdateCommandName,
                 new RelayCommand(UpdateCommand_Execute, 

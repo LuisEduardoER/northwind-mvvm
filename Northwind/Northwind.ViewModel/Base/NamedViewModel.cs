@@ -32,6 +32,9 @@ namespace Northwind.ViewModel
 
         #endregion Properties
 
+        public NamedViewModel()
+        { }
+
         public NamedViewModel(string header)
         {
             Name = header;

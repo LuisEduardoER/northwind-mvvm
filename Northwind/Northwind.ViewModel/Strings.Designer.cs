@@ -79,7 +79,7 @@ namespace Northwind.ViewModel {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Customers.
+        ///   Looks up a localized string similar to Customer Details.
         /// </summary>
         internal static string CustomerDetailsDisplayName {
             get {
