@@ -16,10 +16,5 @@ namespace Northwind.UI.WPF
         {
             InitializeComponent();
         }
-
-        public void HandleDoubleClick(object sender, MouseButtonEventArgs mouseButtonEventArgs)
-        {
-            MessageBox.Show("Worked bitch");
-        }
     }
 }

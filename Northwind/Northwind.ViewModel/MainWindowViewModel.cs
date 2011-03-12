@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Data;
 using Northwind.Application;
 using Northwind.Interfaces;
@@ -23,19 +24,30 @@ namespace Northwind.ViewModel
                     _controlPanel 
                         = new ControlPanelViewModel();
                     _controlPanel.ShowCustomerDetails 
-                        += ControlPanel_ShowCustomerDetails;
+                        += ControlPanelShowCustomerDetails;
                 }
                 return _controlPanel;
             }
         }
 
-        void ControlPanel_ShowCustomerDetails(object sender, 
+        void ControlPanelShowCustomerDetails(object sender, 
                 CustomerEventArgs e)
         {
-            CustomerDetailsViewModel customerDetailsViewModelBase
-                = new CustomerDetailsViewModel(e.CustomerID);
-            Tools.Add(customerDetailsViewModelBase);
-            SetCurrentTool(customerDetailsViewModelBase);
+            CustomerDetailsViewModel customerDetailsViewModel 
+                = Tools.Cast<CustomerDetailsViewModel>()
+                      .FirstOrDefault(
+                          detailsViewModel => 
+                          detailsViewModel.Customer.CustomerID == e.CustomerID
+                      ) ?? GetNewCustomerDetailsViewModel(e.CustomerID);
+            SetCurrentTool(customerDetailsViewModel);
+        }
+
+        private CustomerDetailsViewModel GetNewCustomerDetailsViewModel(string customerID)
+        {
+            CustomerDetailsViewModel customerDetailsViewModel 
+                = new CustomerDetailsViewModel(customerID);
+            Tools.Add(customerDetailsViewModel);
+            return customerDetailsViewModel;
         }
 
         private ObservableCollection<ToolViewModel> _tools;
