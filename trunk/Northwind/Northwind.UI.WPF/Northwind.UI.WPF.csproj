@@ -154,6 +154,14 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Northwind.Framework.UI\Northwind.Framework.UI.csproj">
+      <Project>{4C5682A4-AFD9-4EA2-B96D-303B63419FB7}</Project>
+      <Name>Northwind.Framework.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Northwind.Interfaces\Northwind.Interfaces.csproj">
+      <Project>{33FFA657-2577-45B5-A875-7F8131A86360}</Project>
+      <Name>Northwind.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Northwind.ViewModel\Northwind.ViewModel.csproj">
       <Project>{BFB9FEA5-D674-416C-8B04-06504699C80C}</Project>
       <Name>Northwind.ViewModel</Name>

@@ -37,10 +37,10 @@ namespace Northwind.ViewModel
 
         public const string CustomersPropertyName = "Customers";
 
-        private ObservableCollection<ICustomerModel> _customers
-                    = new ObservableCollection<ICustomerModel>();
+        private ObservableCollection<CustomerViewModel> _customers
+                    = new ObservableCollection<CustomerViewModel>();
 
-        public ObservableCollection<ICustomerModel> Customers
+        public ObservableCollection<CustomerViewModel> Customers
         {
             get
             {
@@ -82,12 +82,17 @@ namespace Northwind.ViewModel
                     in ApplicationServices.Instance.NorthwindManager
                         .GetAllCustomersNameAndID())
                 {
-                    Customers.Add(customer);
+                    CustomerViewModel customerViewModel =
+                        new CustomerViewModel(customer);
+                    customerViewModel.ShowCustomerDetails 
+                        += CustomerViewModelShowCustomerDetails;
+                    Customers.Add(customerViewModel);
                 }
             }
         }
 
-        public void RaiseShowCustomerDetails()
+        void CustomerViewModelShowCustomerDetails(
+            object sender, CustomerEventArgs e)
         {
             ShowCustomerDetails(this, EventArgs.Empty);
         }

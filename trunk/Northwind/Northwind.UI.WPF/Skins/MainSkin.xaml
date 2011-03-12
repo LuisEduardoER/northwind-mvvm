@@ -47,12 +47,4 @@
         <Setter Property="Margin" Value="4" />
     </Style>
 
-    <Style x:Key="DetailsItemStyle" TargetType="{x:Type ListViewItem}">
-        <Style.Triggers>
-            <i:EventTrigger EventName="DoubleClick">
-                <cmd:EventToCommand Command="Binding Path=OpenOrderDetailsCommand" />
-            </i:EventTrigger>
-        </Style.Triggers>
-    </Style>
-
 </ResourceDictionary>
