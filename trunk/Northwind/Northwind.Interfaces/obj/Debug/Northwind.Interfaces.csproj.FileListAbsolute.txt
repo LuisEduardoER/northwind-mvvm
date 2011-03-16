@@ -1,5 +1,0 @@
-C:\MVVMBook\Northwind.Interfaces\bin\Debug\Northwind.Interfaces.dll
-C:\MVVMBook\Northwind.Interfaces\bin\Debug\Northwind.Interfaces.pdb
-C:\MVVMBook\Northwind.Interfaces\obj\Debug\ResolveAssemblyReference.cache
-C:\MVVMBook\Northwind.Interfaces\obj\Debug\Northwind.Interfaces.dll
-C:\MVVMBook\Northwind.Interfaces\obj\Debug\Northwind.Interfaces.pdb

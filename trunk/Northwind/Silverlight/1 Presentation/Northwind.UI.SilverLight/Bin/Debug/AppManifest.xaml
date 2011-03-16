@@ -1,8 +1,0 @@
-﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Northwind.UI.SilverLight" EntryPointType="Northwind.UI.SilverLight.App" RuntimeVersion="3.0.40818.0">
-  <Deployment.Parts>
-    <AssemblyPart x:Name="Northwind.UI.SilverLight" Source="Northwind.UI.SilverLight.dll" />
-    <AssemblyPart x:Name="GalaSoft.MvvmLight" Source="GalaSoft.MvvmLight.dll" />
-    <AssemblyPart x:Name="GalaSoft.MvvmLight.Extras" Source="GalaSoft.MvvmLight.Extras.dll" />
-    <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
-  </Deployment.Parts>
-</Deployment>
