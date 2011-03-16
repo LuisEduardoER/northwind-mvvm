@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3591F47C-3082-4177-A281-E1A1E4B166A8}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Northwind.Interfaces.Silverlight</RootNamespace>
+    <AssemblyName>Northwind.Interfaces.Silverlight</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Northwind.Interfaces\Data\Entity\ICategoryEntity.cs">
+      <Link>Data\Entity\ICategoryEntity.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\Entity\ICustomerEntity.cs">
+      <Link>Data\Entity\ICustomerEntity.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\Entity\IEmployeeEntity.cs">
+      <Link>Data\Entity\IEmployeeEntity.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\Entity\IOrderDetailEntity.cs">
+      <Link>Data\Entity\IOrderDetailEntity.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\Entity\IOrderEntity.cs">
+      <Link>Data\Entity\IOrderEntity.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\Entity\IProductEntity.cs">
+      <Link>Data\Entity\IProductEntity.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\ICategory.cs">
+      <Link>Data\ICategory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\ICustomer.cs">
+      <Link>Data\ICustomer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\IEmployee.cs">
+      <Link>Data\IEmployee.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\IOrder.cs">
+      <Link>Data\Entity\IOrder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\IOrderDetail.cs">
+      <Link>Data\IOrderDetail.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\IProduct.cs">
+      <Link>Data\IProduct.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\Model\ICategoryModel.cs">
+      <Link>Data\Model\ICategoryModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\Model\ICustomerModel.cs">
+      <Link>Data\Model\ICustomerModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\Model\IEmployeeModel.cs">
+      <Link>Data\Model\IEmployeeModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\Model\IOrderDetailModel.cs">
+      <Link>Data\Model\IOrderDetailModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\Model\IOrderModel.cs">
+      <Link>Data\Model\IOrderModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\Data\Model\IProductModel.cs">
+      <Link>Data\Model\IProductModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\IApplicationServices.cs">
+      <Link>IApplicationServices.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\INorthwindManager.cs">
+      <Link>INorthwindManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\INorthwindRepository.cs">
+      <Link>INorthwindRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Northwind.Interfaces\IObjectFactory.cs">
+      <Link>IObjectFactory.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+      <UserProperties ProjectLinkReference="33ffa657-2577-45b5-a875-7f8131a86360" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

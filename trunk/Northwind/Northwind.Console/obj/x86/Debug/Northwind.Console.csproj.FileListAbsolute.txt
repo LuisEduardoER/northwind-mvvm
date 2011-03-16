@@ -1,0 +1,14 @@
+C:\MVVMBook\Northwind.Console\bin\Debug\Northwind.sdf
+C:\MVVMBook\Northwind.Console\bin\Debug\Northwind.Console.exe.config
+C:\MVVMBook\Northwind.Console\bin\Debug\Northwind.Console.exe
+C:\MVVMBook\Northwind.Console\bin\Debug\Northwind.Console.pdb
+C:\MVVMBook\Northwind.Console\bin\Debug\Northwind.Application.dll
+C:\MVVMBook\Northwind.Console\bin\Debug\Northwind.Data.dll
+C:\MVVMBook\Northwind.Console\bin\Debug\Northwind.Interfaces.dll
+C:\MVVMBook\Northwind.Console\bin\Debug\Ninject.dll
+C:\MVVMBook\Northwind.Console\bin\Debug\Northwind.Application.pdb
+C:\MVVMBook\Northwind.Console\bin\Debug\Northwind.Data.pdb
+C:\MVVMBook\Northwind.Console\bin\Debug\Northwind.Interfaces.pdb
+C:\MVVMBook\Northwind.Console\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\MVVMBook\Northwind.Console\obj\x86\Debug\Northwind.Console.exe
+C:\MVVMBook\Northwind.Console\obj\x86\Debug\Northwind.Console.pdb

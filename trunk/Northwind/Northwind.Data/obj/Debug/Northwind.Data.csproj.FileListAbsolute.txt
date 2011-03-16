@@ -1,0 +1,9 @@
+C:\MVVMBook\Northwind.Data\bin\Debug\Northwind.sdf
+C:\MVVMBook\Northwind.Data\bin\Debug\Northwind.Data.dll.config
+C:\MVVMBook\Northwind.Data\bin\Debug\Northwind.Data.dll
+C:\MVVMBook\Northwind.Data\bin\Debug\Northwind.Data.pdb
+C:\MVVMBook\Northwind.Data\bin\Debug\Northwind.Interfaces.dll
+C:\MVVMBook\Northwind.Data\bin\Debug\Northwind.Interfaces.pdb
+C:\MVVMBook\Northwind.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\MVVMBook\Northwind.Data\obj\Debug\Northwind.Data.dll
+C:\MVVMBook\Northwind.Data\obj\Debug\Northwind.Data.pdb

@@ -1,0 +1,1 @@
+C:\MVVMBook\Silverlight\Northwind.Application.Silverlight\obj\Debug\ResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+C:\MVVMBook\Silverlight\Northwind.Interfaces.Silverlight\obj\Debug\ResolveAssemblyReference.cache
+C:\MVVMBook\Silverlight\Northwind.Interfaces.Silverlight\Bin\Debug\Northwind.Interfaces.Silverlight.dll
+C:\MVVMBook\Silverlight\Northwind.Interfaces.Silverlight\Bin\Debug\Northwind.Interfaces.Silverlight.pdb
+C:\MVVMBook\Silverlight\Northwind.Interfaces.Silverlight\obj\Debug\Northwind.Interfaces.Silverlight.dll
+C:\MVVMBook\Silverlight\Northwind.Interfaces.Silverlight\obj\Debug\Northwind.Interfaces.Silverlight.pdb

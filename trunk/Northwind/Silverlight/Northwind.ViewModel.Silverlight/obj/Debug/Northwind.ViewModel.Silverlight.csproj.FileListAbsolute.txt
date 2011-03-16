@@ -1,0 +1,4 @@
+C:\MVVMBook\Silverlight\Northwind.ViewModel.Silverlight\obj\Debug\ResolveAssemblyReference.cache
+C:\MVVMBook\Silverlight\Northwind.ViewModel.Silverlight\obj\Debug\Northwind.ViewModel.Silverlight.Strings.resources
+C:\MVVMBook\Silverlight\Northwind.ViewModel.Silverlight\obj\Debug\GenerateResource.read.1.tlog
+C:\MVVMBook\Silverlight\Northwind.ViewModel.Silverlight\obj\Debug\GenerateResource.write.1.tlog
