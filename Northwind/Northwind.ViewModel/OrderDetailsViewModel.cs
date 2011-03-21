@@ -8,7 +8,7 @@ namespace Northwind.ViewModel
         private IOrderModel _order;                
 
         public OrderDetailsViewModel(IOrderModel order)
-        {
+        {            
             ////if (IsInDesignMode)
             ////{
             ////    // Code runs in Blend --> create design time data.

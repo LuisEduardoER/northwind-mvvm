@@ -8,6 +8,7 @@ using Northwind.Interfaces.Data.Model;
 
 namespace Northwind.ViewModel
 {
+    //TODO: Why does it implement INotifyPropertyChanged instead of inheriting from ViewModelBase?
     public class CustomerViewModel : ICustomerModel, INotifyPropertyChanged
     {
         #region Fields
