@@ -16,6 +16,8 @@ namespace Northwind.Application
                 .ObjectFactory.Get<INorthwindRepository>();
         }
 
+        //TODO: Why do we need to convert it to List<CustomerModel> before returning
+        //TODO: Is it because of deferred execution of linq queries
         public IEnumerable<ICustomerModel> GetAllCustomersNameAndID(
             bool getOrders = false)
         {
@@ -26,6 +28,8 @@ namespace Northwind.Application
                 .ToList();
         }
 
+        //TODO: Why do we need to convert it to List<CustomerModel> before returning
+        //TODO: Is it because of deferred execution of linq queries
         public IEnumerable<IOrderModel> GetOrders(string customerID)
         {
             return _repository.GetOrders(customerID)
@@ -34,6 +38,8 @@ namespace Northwind.Application
                 .ToList();
         }
 
+        //TODO: Why do we need to convert it to List<CustomerModel> before returning
+        //TODO: Is it because of deferred execution of linq queries
         public IEnumerable<IOrderDetailModel> GetOrderDetails(int orderID)
         {
             return _repository.GetOrderDetails(orderID)

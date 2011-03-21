@@ -35,7 +35,8 @@ namespace Northwind.Application
 
         public IObjectFactory ObjectFactory { get; internal set; }
 
-        public ApplicationServices(IObjectFactory objectFactory)
+        //TODO: constructor should be private for singleton implementation
+        private ApplicationServices(IObjectFactory objectFactory)
         {
             ObjectFactory = objectFactory;
         }

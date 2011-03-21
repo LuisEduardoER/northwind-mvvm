@@ -18,3 +18,10 @@ C:\MVVMBook\Silverlight\Northwind.UI.SilverLight\Northwind.UI.SilverLight\obj\De
 C:\MVVMBook\Silverlight\Northwind.UI.SilverLight\Northwind.UI.SilverLight\obj\Debug\Northwind.UI.SilverLight.dll
 C:\MVVMBook\Silverlight\Northwind.UI.SilverLight\Northwind.UI.SilverLight\obj\Debug\Northwind.UI.SilverLight.pdb
 C:\MVVMBook\Silverlight\Northwind.UI.SilverLight\Northwind.UI.SilverLight\obj\Debug\XapCacheFile.xml
+C:\MVVMBook\Silverlight\1 Presentation\Northwind.UI.SilverLight\obj\Debug\ResolveAssemblyReference.cache
+C:\MVVMBook\Silverlight\1 Presentation\Northwind.UI.SilverLight\obj\Debug\App.g.i.cs
+C:\MVVMBook\Silverlight\1 Presentation\Northwind.UI.SilverLight\obj\Debug\MainPage.g.i.cs
+C:\MVVMBook\Silverlight\1 Presentation\Northwind.UI.SilverLight\obj\Debug\Northwind.UI.SilverLight.g.resources
+C:\MVVMBook\Silverlight\1 Presentation\Northwind.UI.SilverLight\obj\Debug\Northwind.UI.SilverLight.Properties.Resources.resources
+C:\MVVMBook\Silverlight\1 Presentation\Northwind.UI.SilverLight\obj\Debug\GenerateResource.read.1.tlog
+C:\MVVMBook\Silverlight\1 Presentation\Northwind.UI.SilverLight\obj\Debug\GenerateResource.write.1.tlog

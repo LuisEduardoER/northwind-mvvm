@@ -6,6 +6,8 @@ namespace Northwind.ViewModel
 {
     public class CommandViewModel : NamedViewModel
     {
+        //TODO: When it already inherits from NamedViewModel why doesn't it use Name property
+        //of NamedViewModel instead of defining one more Name property
         public const string CommandPropertyName = "Command";
 
         private ICommand _command;

@@ -21,6 +21,8 @@ namespace Northwind.Console
             {
                 System.Console.WriteLine(customer.CompanyName);
             }
+
+            System.Console.ReadKey();
         }
     }
 }

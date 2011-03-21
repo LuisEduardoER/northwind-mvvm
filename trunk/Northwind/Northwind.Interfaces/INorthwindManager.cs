@@ -5,6 +5,7 @@ namespace Northwind.Interfaces
 {
     public interface INorthwindManager
     {
+        //TODO: can be more intuitive name as it is returning more than Name and ID
         IEnumerable<ICustomerModel> GetAllCustomersNameAndID(
             bool getOrders = false);
 

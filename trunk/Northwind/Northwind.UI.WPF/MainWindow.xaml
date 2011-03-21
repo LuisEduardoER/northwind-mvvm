@@ -35,6 +35,9 @@
         </Expander>
         <TabControl ItemsSource="{Binding Tools}" Margin="4" 
             IsSynchronizedWithCurrentItem="True">
+            <!--TODO: It would make more sense to use ItemTemplate and ContentTemplate separately. 
+                        The Button should be in ItemTemplate (Header) and ContentPresenter in ContentTemplate
+            -->
             <TabControl.ItemTemplate>
                 <DataTemplate>
                     <DockPanel Width="120">
