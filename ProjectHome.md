@@ -1,0 +1,1 @@
+MVVM implementation based on Northwind database which is provided as an example of proper MVVM and documented in the book "MVVM Survivial Guide for Enterprise Architectures in WPF and Silverlight."
